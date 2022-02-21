@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icons/website-icon.svg">
     <title>Discord Timestamp Builder</title>
 </head>
 <body>
@@ -12,14 +13,14 @@
             <p class="box">Discord Timestamp Builder</p>
             <div class="flex align-right">
                 <p class="box">Created by Archasion</p>
-                <button class="box bg-accent" style="order: 1">icon</button> <!-- Temporary text -->
+                <button id="toggle-theme" class="box bg-accent" style="order: 1"><img src="icons/sun.svg"></button>
             </div>
         </div>
     </nav>
     <div id="container" class="flex flex-column">
         <div id="preview" class="secondary-box flex flex-column">
             <div id="preview-header" class="flex flex-row">
-                <p id="timestamp-text">Timestamp:<p id="raw-timestamp" class="box secondary-box">placeholder</p></p>
+                <p id="timestamp-text">Timestamp:<p id="raw-timestamp" class="box secondary-box">placeholder</p></p> <!-- Temporary text -->
                 <button id="copy-timestamp" class="box bg-accent align-right">c</button>
             </div>
         </div>

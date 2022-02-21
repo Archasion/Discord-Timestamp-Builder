@@ -90,6 +90,10 @@ button:hover {
   font-weight: bold;
 }
 
+#toggle-theme {
+  padding: 14px;
+}
+
 #container {
   width: 75%;
   margin: 100px auto;

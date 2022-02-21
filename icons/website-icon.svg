@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="clip-DTB_Icon">
+      <rect width="512" height="512"/>
+    </clipPath>
+  </defs>
+  <g id="DTB_Icon" data-name="DTB Icon" clip-path="url(#clip-DTB_Icon)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="256" cy="256" r="256" fill="#5267fa"/>
+    <g id="Rectangle_28" data-name="Rectangle 28" transform="translate(128 133)" fill="none" stroke="#fff" stroke-width="20">
+      <rect width="257" height="257" rx="37" stroke="none"/>
+      <rect x="10" y="10" width="237" height="237" rx="27" fill="none"/>
+    </g>
+    <path id="Rectangle_29" data-name="Rectangle 29" d="M37,0H220a37,37,0,0,1,37,37V96a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V37A37,37,0,0,1,37,0Z" transform="translate(128 133)" fill="#fff"/>
+    <g id="Rectangle_30" data-name="Rectangle 30" transform="translate(182 86)" fill="#fff" stroke="#5267fa" stroke-width="10">
+      <rect width="43" height="95" rx="21.5" stroke="none"/>
+      <rect x="5" y="5" width="33" height="85" rx="16.5" fill="none"/>
+    </g>
+    <g id="Rectangle_31" data-name="Rectangle 31" transform="translate(287 86)" fill="#fff" stroke="#5267fa" stroke-width="10">
+      <rect width="43" height="95" rx="21.5" stroke="none"/>
+      <rect x="5" y="5" width="33" height="85" rx="16.5" fill="none"/>
+    </g>
+  </g>
+</svg>
