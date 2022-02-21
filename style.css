@@ -1,168 +1,170 @@
 :root {
-  --primary-text-color: #fff;
-  --secondary-text-color: #dcddde;
-  --tertiary-text-color: #ffffff6d;
-  --primary-box-bg-color: #18191b;
-  --secondary-box-bg-color: #25272c;
-  --bg-color: #2f3136;
-  --accent-color: #5267fa;
+	--primary-text-color: #fff;
+	--secondary-text-color: #ffffff6d;
+	--primary-box-color: #18191b;
+	--secondary-box-color: #25272c;
+	--bg-color: #2f3136;
+	--accent-color: #5267fa;
 }
 
 * {
-  margin: 0;
+	margin: 0;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 body {
-  background: var(--bg-color);
-  color: var(--primary-text-color);
-  font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
-  overflow: -moz-hidden-unscrollable;
-  height: 100%;
+	background: var(--bg-color);
+	color: var(--primary-text-color);
+	font-family: Arial, Helvetica, sans-serif;
+	overflow: hidden;
+	overflow: -moz-hidden-unscrollable;
+	height: 100%;
 }
 
 nav {
-  padding: 20px;
+	padding: 20px;
 }
 
 button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  font-family: inherit;
-  color: inherit;
-  font-size: inherit;
+	background: none;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	font-family: inherit;
+	color: inherit;
+	font-size: inherit;
 }
 
 .fade:hover {
-  opacity: 75%;
+	opacity: 75%;
 }
 
 .pulse:hover {
-  animation: pulse 0.3s 1;
-  animation-timing-function: linear;
-}
-
-.flex {
-  display: flex;
-  display: -webkit-flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.align-right {
-  margin-left: auto !important;
-}
-
-.box {
-  background: var(--primary-box-bg-color);
-  width: fit-content;
-  padding: 20px;
-  border-radius: 5px;
-  margin: 0;
-}
-
-.secondary-box {
-  background: var(--secondary-box-bg-color);
-}
-
-.height-300px {
-  height: 300px;
+	animation: pulse 0.3s 1;
+	animation-timing-function: linear;
 }
 
 .bg-accent {
-  background: var(--accent-color);
+	color: #fff !important;
+}
+
+.flex {
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.align-right {
+	margin-left: auto !important;
+}
+
+.box {
+	background: var(--primary-box-color);
+	width: fit-content;
+	padding: 20px;
+	border-radius: 5px;
+	margin: 0;
+}
+
+.secondary-box {
+	background: var(--secondary-box-color);
+}
+
+.height-300px {
+	height: 300px;
+}
+
+.bg-accent {
+	background: var(--accent-color);
 }
 
 .accent {
-  color: var(--accent-color);
+	color: var(--accent-color);
 }
 
 .clickable {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .bold {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 #toggle-theme {
-  padding: 14px;
+	padding: 14px;
 }
 
 #container {
-  width: 75%;
-  margin: 100px auto;
+	width: 75%;
+	margin: 100px auto;
 }
 
 #preview,
 #builder {
-  width: 100%;
-  height: 175px;
-  border-radius: 8px;
+	width: 100%;
+	height: 175px;
+	border-radius: 8px;
 }
 
 #builder {
-  height: 300px;
+	height: 300px;
 }
 
 #preview-header {
-  background: var(--primary-box-bg-color);
-  border-radius: 8px 8px 0 0;
-  width: 100%;
+	background: var(--primary-box-color);
+	border-radius: 8px 8px 0 0;
+	width: 100%;
 }
 
 #preview-header * {
-  margin: 10px 0 10px 0;
+	margin: 10px 0 10px 0;
 }
 
 #timestamp-text {
-  margin-left: 20px;
+	margin-left: 20px;
 }
 
 #copy-timestamp {
-  padding: 8px 13px;
-  border-radius: 4px;
-  margin-right: 10px;
+	padding: 8px 13px;
+	border-radius: 4px;
+	margin-right: 10px;
 }
 
 #raw-timestamp {
-  color: var(--tertiary-text-color);
-  padding: 8px 12px;
+	color: var(--secondary-text-color);
+	padding: 8px 12px;
 }
 
 #convert-timestamp {
-  background: var(--accent-color);
-  margin-top: auto;
-  order: -1;
-  padding: 14px;
-  border-radius: 0 0 8px 8px;
-  width: 100%;
-  font-size: 1.2em;
+	margin-top: auto;
+	order: -1;
+	padding: 14px;
+	border-radius: 0 0 8px 8px;
+	width: 100%;
+	font-size: 1.2em;
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
