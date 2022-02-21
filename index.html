@@ -17,13 +17,14 @@
         </div>
     </nav>
     <div id="container" class="flex flex-column">
-        <div id="preview" class="secondary-box">
+        <div id="preview" class="secondary-box flex flex-column">
             <div id="preview-header" class="flex flex-row">
-                <p>Timestamp:<p id="raw-timestamp" class="box secondary-box">placeholder</p></p>
+                <p id="timestamp-text">Timestamp:<p id="raw-timestamp" class="box secondary-box">placeholder</p></p>
                 <button id="copy-timestamp" class="box bg-accent align-right">c</button>
             </div>
         </div>
-        <div id="builder" class="secondary-box">
+        <div id="builder" class="secondary-box flex flex-column">
+            <button id="convert-timestamp">CONVERT</button>
         </div>
     </div>
 </body>

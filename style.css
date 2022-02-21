@@ -12,10 +12,6 @@
   margin: 0;
 }
 
-p {
-  width: fit-content;
-}
-
 body {
   background: var(--bg-color);
   color: var(--primary-text-color);
@@ -60,9 +56,9 @@ button {
 
 .box {
   background: var(--primary-box-bg-color);
+  width: fit-content;
   padding: 20px;
   border-radius: 5px;
-  width: fit-content;
   margin: 0;
 }
 
@@ -103,17 +99,35 @@ button {
 }
 
 #preview-header {
-  padding: 10px 10px 10px 20px;
   background: var(--primary-box-bg-color);
   border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+
+#preview-header * {
+  margin: 10px 0 10px 0;
+}
+
+#timestamp-text {
+  margin-left: 20px;
 }
 
 #copy-timestamp {
   padding: 8px 13px;
   border-radius: 4px;
+  margin-right: 10px;
 }
 
 #raw-timestamp {
-  padding: 8px 12px;
   color: var(--tertiary-text-color);
+  padding: 8px 12px;
+}
+
+#convert-timestamp {
+  background: var(--accent-color);
+  margin-top: auto;
+  order: -1;
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+  width: 100%;
 }
