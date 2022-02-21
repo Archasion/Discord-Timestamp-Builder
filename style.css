@@ -1,9 +1,19 @@
 :root {
   --primary-text-color: #fff;
   --secondary-text-color: #dcddde;
-  --box-bg-color: #18191b;
+  --tertiary-text-color: #ffffff6d;
+  --primary-box-bg-color: #18191b;
+  --secondary-box-bg-color: #25272c;
   --bg-color: #2f3136;
   --accent-color: #5267fa;
+}
+
+* {
+  margin: 0;
+}
+
+p {
+  width: fit-content;
 }
 
 body {
@@ -12,30 +22,56 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
-  margin: 0;
+  height: 100%;
 }
 
 nav {
   padding: 20px;
 }
 
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
 .flex {
   display: flex;
   display: -webkit-flex;
-  flex-direction: row;
+  align-items: center;
   gap: 10px;
 }
 
-.flex-right {
-  margin-left: auto;
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-right {
+  margin-left: auto !important;
 }
 
 .box {
-  background: var(--box-bg-color);
+  background: var(--primary-box-bg-color);
   padding: 20px;
   border-radius: 5px;
   width: fit-content;
   margin: 0;
+}
+
+.secondary-box {
+  background: var(--secondary-box-bg-color);
+}
+
+.height-300px {
+  height: 300px;
 }
 
 .bg-accent {
@@ -48,4 +84,36 @@ nav {
 
 .clickable {
   cursor: pointer;
+}
+
+#container {
+  width: 75%;
+  margin: 100px auto;
+}
+
+#preview,
+#builder {
+  width: 100%;
+  height: 175px;
+  border-radius: 8px;
+}
+
+#builder {
+  height: 300px;
+}
+
+#preview-header {
+  padding: 10px 10px 10px 20px;
+  background: var(--primary-box-bg-color);
+  border-radius: 8px 8px 0 0;
+}
+
+#copy-timestamp {
+  padding: 8px 13px;
+  border-radius: 4px;
+}
+
+#raw-timestamp {
+  padding: 8px 12px;
+  color: var(--tertiary-text-color);
 }
