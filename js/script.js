@@ -99,6 +99,10 @@ $(document).ready(function () {
 		if (!second) second = currentDate.getSeconds();
 
 		if (month.toString().match(/^\d{1}$/gi)) month = `0${month}`;
+		if (day.toString().match(/^\d{1}$/gi)) day = `0${day}`;
+		if (hour.toString().match(/^\d{1}$/gi)) hour = `0${hour}`;
+		if (minute.toString().match(/^\d{1}$/gi)) minute = `0${minute}`;
+		if (second.toString().match(/^\d{1}$/gi)) second = `0${second}`;
 
 		const dateString = `${year}-${month}-${day}T${hour}:${minute}:${second}${timezone}`;
 
