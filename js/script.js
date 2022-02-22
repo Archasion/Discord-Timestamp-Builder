@@ -98,6 +98,7 @@ $(document).ready(function () {
 		if (!minute) minute = currentDate.getMinutes();
 		if (!second) second = currentDate.getSeconds();
 
+		if (year.toString().match(/^\d{2}$/gi)) year = `20${year}`;
 		if (month.toString().match(/^\d{1}$/gi)) month = `0${month}`;
 		if (day.toString().match(/^\d{1}$/gi)) day = `0${day}`;
 		if (hour.toString().match(/^\d{1}$/gi)) hour = `0${hour}`;
