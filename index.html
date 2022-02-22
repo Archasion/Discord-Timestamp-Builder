@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="icons/website-icon.svg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/script.js"></script>
     <title>Discord Timestamp Builder</title>
 </head>
 <body>
@@ -24,7 +25,17 @@
         <div id="preview" class="secondary-box flex flex-column">
             <div id="preview-header" class="flex flex-row">
                 <p id="timestamp-text">Timestamp:<span id="raw-timestamp" class="box secondary-box">placeholder</span></p> <!-- Temporary text -->
-                <button id="copy-timestamp" class="box bg-accent align-right pulse">c</button>
+                <button id="clear" class="box pulse">CLEAR</button>
+                <button id="copy" class="box bg-accent pulse">COPY</button>
+            </div>
+            <div id="user-preview" class="flex flex-row">
+                <div id="user-avatar">
+                    <img id="user-avatar" src="icons/user-avatar.ico" alt="">
+                </div>
+                <div id="user-preview-info" class="flex flex-column">
+                    <p id="user-name">Archasion</p>
+                    <p id="user-message" class="box">test</p>
+                </div>
             </div>
         </div>
         <div id="builder" class="secondary-box flex flex-column">
@@ -58,12 +69,21 @@
                     </div>
                 </div>
             </div>
-            <select name="timestamp-type" id="timestamp-type" class="clickable">
+            <select name="type" id="type" class="selection clickable">
                 <div id="selection-arrow"></div>
-                <option id="default-selection" value="" disabled selected>Select the timestamp type</option>
-                <option value="f">Short Full Date: Thursday 2nd, 2022</option>
+                <option id="default-selection" value="F" disabled selected>Select the timestamp type</option>
+                <option value="F">Full Date [Type 1]: Thursday, January 1, 1970 1:00 AM</option>
+                <option value="f">Full Date [Type 2]: January 1, 1970 1:00 AM</option>
+                <option value="D">Short Date [Type 1]: January 1, 1970</option>
+                <option value="d">Short Date [Type 2]: 01/01/1970</option>
+                <option value="T">Time [Type 1]: 1:00:00 AM</option>
+                <option value="t">Time [Type 2]: 1:00 AM</option>
+                <option value="R">Duration [Until/Ago]: 52 years ago</option>
             </select>
-            <button id="convert-timestamp" class="fade bg-accent">CONVERT</button>
+            <select name="timezone" id="timezone" class="selection clickable">
+                <div id="selection-arrow"></div>
+            </select>
+            <button id="convert" class="fade bg-accent">CONVERT</button>
         </div>
     </div>
 </body>

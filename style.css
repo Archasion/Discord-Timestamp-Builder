@@ -3,6 +3,7 @@
 	--secondary-text-color: #ffffff6d;
 	--primary-box-color: #18191b;
 	--secondary-box-color: #25272c;
+	--tertiary-box-color: #ffffff13;
 	--bg-color: #2f3136;
 	--accent-color: #5267fa;
 	--input-color: #464a52;
@@ -38,6 +39,15 @@ button {
 	font-family: inherit;
 	color: inherit;
 	font-size: inherit;
+}
+
+select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+select::-ms-expand {
+	display: none;
 }
 
 .fade:hover {
@@ -129,6 +139,10 @@ button {
 	margin: 100px auto;
 }
 
+#preview {
+	gap: 0;
+}
+
 #preview,
 #builder {
 	width: 100%;
@@ -145,6 +159,7 @@ button {
 	background: var(--primary-box-color);
 	border-radius: 8px 8px 0 0;
 	width: 100%;
+	flex-direction: row-reverse;
 }
 
 #preview-header * {
@@ -152,13 +167,24 @@ button {
 }
 
 #timestamp-text {
-	margin: auto 20px;
+	margin: auto auto auto 20px;
+	order: 1;
 }
 
-#copy-timestamp {
+#preview-header button {
 	padding: 8px 13px;
 	border-radius: 4px;
 	margin-right: 10px;
+	font-size: 14px;
+}
+
+#clear {
+	background: var(--secondary-box-color);
+	margin: 10px 0 !important;
+}
+
+#copy {
+	order: -1;
 }
 
 #raw-timestamp {
@@ -167,7 +193,7 @@ button {
 	margin-left: 10px;
 }
 
-#convert-timestamp {
+#convert {
 	order: -1;
 	padding: 14px;
 	border-radius: 0 0 8px 8px;
@@ -176,7 +202,7 @@ button {
 }
 
 #date-constructor {
-	order: 1;
+	order: 2;
 	margin: 0 10% 10px 10% !important;
 }
 
@@ -197,18 +223,26 @@ button {
 	margin-bottom: 5px;
 }
 
-#timestamp-type {
+#type {
+	margin-bottom: 20px !important;
+}
+
+#timezone {
+	order: 1;
+}
+
+.selection {
 	background: var(--primary-box-color);
 	color: var(--primary-text-color);
 	width: calc(100% - 20%);
-	margin: 0 10% 50px 10% !important;
+	margin: 0 10% 5px 10% !important;
 	border: none;
 	padding: 15px;
 	font-size: 15px;
 	border-radius: 5px;
 }
 
-#timestamp-type:focus {
+.selection:focus {
 	outline: none;
 }
 
@@ -221,6 +255,35 @@ button {
 	height: 100%;
 	background: var(--accent-color);
 	border-radius: 0 5px 5px 0;
+}
+
+#user-preview {
+	margin: auto 5%;
+	width: calc(100% - 10%);
+}
+
+#user-avatar {
+	height: 80px;
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+}
+
+#user-preview-info {
+	margin-left: 10px;
+	height: 100%;
+	align-items: flex-start;
+}
+
+#user-name {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+#user-message {
+	padding: 5px 8px;
+	border-radius: 3px;
+	background: var(--tertiary-box-color);
 }
 
 @keyframes pulse {
