@@ -23,11 +23,46 @@
     <div id="container" class="flex flex-column">
         <div id="preview" class="secondary-box flex flex-column">
             <div id="preview-header" class="flex flex-row">
-                <p id="timestamp-text">Timestamp:<p id="raw-timestamp" class="box secondary-box">placeholder</p></p> <!-- Temporary text -->
+                <p id="timestamp-text">Timestamp:<span id="raw-timestamp" class="box secondary-box">placeholder</span></p> <!-- Temporary text -->
                 <button id="copy-timestamp" class="box bg-accent align-right pulse">c</button>
             </div>
         </div>
         <div id="builder" class="secondary-box flex flex-column">
+            <div id="date-constructor" class="flex flex-row">
+                <div class="flex flex-row date-row">
+                    <div class="flex flex-column input-label">
+                        <p>DAY</p>
+                        <input id="day" type="text" placeholder="DD" maxlength="2" autocomplete="off">
+                    </div>
+                    <div class="flex flex-column input-label">
+                        <p>MONTH</p>
+                        <input id="month" type="text" placeholder="MM" maxlength="2" autocomplete="off">
+                    </div>
+                    <div class="flex flex-column input-label">
+                        <p>YEAR</p>
+                        <input id="year" type="text" placeholder="YYYY" maxlength="4" autocomplete="off">
+                    </div>
+                </div>
+                <div class="flex flex-row time-row">
+                    <div class="flex flex-column input-label">
+                        <p>HOURS</p>
+                        <input id="hour" type="text" placeholder="HH" maxlength="2" autocomplete="off">
+                    </div>
+                    <div class="flex flex-column input-label">
+                        <p>MINUTES</p>
+                        <input id="minute" type="text" placeholder="MM" maxlength="2" autocomplete="off">
+                    </div>
+                    <div class="flex flex-column input-label">
+                        <p>SECONDS</p>
+                        <input id="second" type="text" placeholder="SS" maxlength="2" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <select name="timestamp-type" id="timestamp-type" class="clickable">
+                <div id="selection-arrow"></div>
+                <option id="default-selection" value="" disabled selected>Select the timestamp type</option>
+                <option value="f">Short Full Date: Thursday 2nd, 2022</option>
+            </select>
             <button id="convert-timestamp" class="fade bg-accent">CONVERT</button>
         </div>
     </div>

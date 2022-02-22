@@ -5,6 +5,7 @@
 	--secondary-box-color: #25272c;
 	--bg-color: #2f3136;
 	--accent-color: #5267fa;
+	--input-color: #464a52;
 }
 
 * {
@@ -103,12 +104,28 @@ button {
 	font-weight: bold;
 }
 
+.date-row {
+	flex-direction: row-reverse;
+	margin-right: 10px;
+}
+
+.time-row {
+	margin-left: 10px;
+	order: 1;
+}
+
+.input-label {
+	gap: 8px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
 #toggle-theme {
 	padding: 14px;
 }
 
 #container {
-	width: 75%;
+	width: 60%;
 	margin: 100px auto;
 }
 
@@ -121,6 +138,7 @@ button {
 
 #builder {
 	height: 300px;
+	flex-direction: column-reverse;
 }
 
 #preview-header {
@@ -134,7 +152,7 @@ button {
 }
 
 #timestamp-text {
-	margin-left: 20px;
+	margin: auto 20px;
 }
 
 #copy-timestamp {
@@ -146,15 +164,63 @@ button {
 #raw-timestamp {
 	color: var(--secondary-text-color);
 	padding: 8px 12px;
+	margin-left: 10px;
 }
 
 #convert-timestamp {
-	margin-top: auto;
 	order: -1;
 	padding: 14px;
 	border-radius: 0 0 8px 8px;
 	width: 100%;
 	font-size: 1.2em;
+}
+
+#date-constructor {
+	order: 1;
+	margin: 0 10% 10px 10% !important;
+}
+
+#date-constructor input {
+	background: var(--input-color);
+	color: var(--primary-text-color);
+	border: none;
+	text-align: center;
+	width: 80%;
+	padding: 10px 8px;
+	border-radius: 3px;
+	font-size: 20px;
+}
+
+#date-constructor p {
+	width: fit-content;
+	margin: 0 !important;
+	margin-bottom: 5px;
+}
+
+#timestamp-type {
+	background: var(--primary-box-color);
+	color: var(--primary-text-color);
+	width: calc(100% - 20%);
+	margin: 0 10% 50px 10% !important;
+	border: none;
+	padding: 15px;
+	font-size: 15px;
+	border-radius: 5px;
+}
+
+#timestamp-type:focus {
+	outline: none;
+}
+
+#date-constructor input:focus {
+	outline: 2px solid var(--accent-color);
+}
+
+#selection-arrow {
+	aspect-ratio: 1 / 1;
+	height: 100%;
+	background: var(--accent-color);
+	border-radius: 0 5px 5px 0;
 }
 
 @keyframes pulse {
