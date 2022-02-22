@@ -102,6 +102,8 @@ $(document).ready(function () {
 
 		const dateString = `${year}-${month}-${day}T${hour}:${minute}:${second}${timezone}`;
 
+		console.log(dateString);
+
 		try {
 			const date = new Date(dateString);
 			$("#raw-timestamp").text(`<t:${parseInt(date / 1000)}:${type}>`);
