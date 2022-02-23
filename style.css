@@ -5,6 +5,7 @@
 	--secondary-box-color: #25272c;
 	--tertiary-box-color: #ffffff13;
 	--bg-color: #2f3136;
+	--pattern-color: #27282c;
 	--accent-color: #5267fa;
 	--input-color: #464a52;
 }
@@ -19,7 +20,10 @@ a {
 }
 
 body {
-	background: var(--bg-color);
+	background-color: var(--bg-color);
+	background-image: linear-gradient(var(--pattern-color) 2px, transparent 2px),
+		linear-gradient(to right, var(--pattern-color) 2px, var(--bg-color) 2px);
+	background-size: 20px 20px;
 	color: var(--primary-text-color);
 	font-family: Arial, Helvetica, sans-serif;
 	overflow: hidden;
