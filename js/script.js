@@ -1,5 +1,7 @@
 // Format: 2015-03-25T12:00:00-06:30
 
+const currentDate = new Date(Date.now());
+
 $(document).ready(function () {
 	for (var i = -12; i <= 14; i++) {
 		let formattedTimezone = "GMT";
@@ -7,20 +9,22 @@ $(document).ready(function () {
 		if (i < 0) formattedTimezone = `GMT${i}`;
 		else if (i > 0) formattedTimezone = `GMT+${i}`;
 
+		let defaultTimezone = false;
+		if (currentDate.getTimezoneOffset() / 60 === i) defaultTimezone = true;
+
 		let value = "+00:00";
 
 		if (i < 0) value = `+${i * -1}:00`;
 		if (i > 0) value = `-${i}:00`;
 		if (value.match(/^[+-]\d{1}:00$/gi)) value = `${value[0]}0${value.slice(1)}`;
 
-		if (value === "+00:00")
+		if ((currentDate.getTimezoneOffset() / 60) % 1 !== 0 && i === 0) defaultTimezone = true;
+		if (defaultTimezone)
 			$("#timezone select").append(
 				`<option value="${value}" default selected>${formattedTimezone}</option>`
 			);
 		else $("#timezone select").append(`<option value="${value}">${formattedTimezone}</option>`);
 	}
-
-	const currentDate = new Date(Date.now());
 
 	const options = {
 		F: {
