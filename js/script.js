@@ -14,10 +14,10 @@ $(document).ready(function () {
 		if (value.match(/^[+-]\d{1}:00$/gi)) value = `${value[0]}0${value.slice(1)}`;
 
 		if (value === "+00:00")
-			$("#timezone").append(
+			$("#timezone select").append(
 				`<option value="${value}" default selected>${formattedTimezone}</option>`
 			);
-		else $("#timezone").append(`<option value="${value}">${formattedTimezone}</option>`);
+		else $("#timezone select").append(`<option value="${value}">${formattedTimezone}</option>`);
 	}
 
 	const currentDate = new Date(Date.now());
@@ -86,7 +86,7 @@ $(document).ready(function () {
 		const selectionItems = { timezone: null, type: null };
 
 		for (const item in dateItems) dateItems[item] = $(`#${item}`).val();
-		for (const item in selectionItems) selectionItems[item] = $(`#${item} :selected`).val();
+		for (const item in selectionItems) selectionItems[item] = $(`#${item} select :selected`).val();
 
 		let { day, month, year, hour, minute, second } = dateItems;
 		let { timezone, type } = selectionItems;
@@ -147,7 +147,7 @@ $(document).ready(function () {
 			setColor("secondary-box-color", "#25272c");
 			setColor("tertiary-box-color", "#ffffff13");
 			setColor("bg-color", "#2f3136");
-			setColor("pattern-color", "#27282c");
+			setColor("pattern-color", "#2d2e32");
 			setColor("accent-color", "#5267fa");
 			setColor("input-color", "#464a52");
 		}

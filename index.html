@@ -69,20 +69,29 @@
                     </div>
                 </div>
             </div>
-            <select name="type" id="type" class="selection clickable">
-                <div id="selection-arrow"></div>
-                <option id="default-selection" value="F" disabled selected>Select the timestamp type</option>
-                <option value="F">Full Date [Type 1] – Thursday, January 1, 1970 1:00 AM</option>
-                <option value="f">Full Date [Type 2] – January 1, 1970 1:00 AM</option>
-                <option value="D">Short Date [Type 1] – January 1, 1970</option>
-                <option value="d">Short Date [Type 2] – 01/01/1970</option>
-                <option value="T">Time [Type 1] – 1:00:00 AM</option>
-                <option value="t">Time [Type 2] – 1:00 AM</option>
-                <option value="R">Duration [Until/Ago] – 52 years ago</option>
-            </select>
-            <select name="timezone" id="timezone" class="selection clickable">
-                <div id="selection-arrow"></div>
-            </select>
+            <div id="type">
+                <select name="type" class="selection clickable">
+                    <div id="selection-arrow"></div>
+                    <option id="default-selection" value="F" disabled selected>Select the timestamp type</option>
+                    <option value="F">Full Date [Type 1] – Thursday, January 1, 1970 1:00 AM</option>
+                    <option value="f">Full Date [Type 2] – January 1, 1970 1:00 AM</option>
+                    <option value="D">Short Date [Type 1] – January 1, 1970</option>
+                    <option value="d">Short Date [Type 2] – 01/01/1970</option>
+                    <option value="T">Time [Type 1] – 1:00:00 AM</option>
+                    <option value="t">Time [Type 2] – 1:00 AM</option>
+                    <option value="R">Duration [Until/Ago] – 52 years ago</option>
+                </select>
+                <div id="selection-arrow">
+                    <div id="down-arrow"></div>
+                </div>
+            </div>
+            <div id="timezone">
+                <select name="timezone" class="selection clickable">
+                </select>
+                <div id="selection-arrow">
+                    <div id="down-arrow"></div>
+                </div>
+            </div>
             <button id="convert" class="fade bg-accent">CONVERT</button>
         </div>
     </div>
